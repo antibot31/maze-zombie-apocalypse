@@ -421,6 +421,7 @@
   Input.init(canvas, onKeyDown);
   startBtn.addEventListener('click', () => {
     Sound.init();                 // must happen inside a user gesture
+    Sound.startMusic();           // cave ambience (no-op if already playing)
     overlay.classList.add('hidden');
     reset();
   });

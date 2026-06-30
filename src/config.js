@@ -43,9 +43,9 @@ const Config = {
   // Chest tuning.
   CHEST: {
     max: 3,                 // most chests allowed on the map at once
-    firstDelayMs: 6000,     // delay before the first chest appears
-    minDelayMs: 9000,       // random respawn window after that
-    maxDelayMs: 16000,
+    firstDelayMs: 12000,    // delay before the first chest appears
+    minDelayMs: 20000,      // random respawn window after that
+    maxDelayMs: 35000,
     safeRadius: 2.5,        // (in tiles) try not to spawn on top of the player
   },
 
@@ -73,4 +73,4 @@ Config.H = Config.ROWS * Config.TILE;
 // Zombie HP grows each wave: tougher base + a steepening per-wave bonus.
 Config.zombieHp = wave => Math.round(40 + (wave - 1) * 18 + Math.pow(wave, 1.4) * 3);
 // Zombie speed ramps up with the wave, capped, with a little randomness.
-Config.zombieSpeed = wave => 0.8 + Math.min(wave * 0.12, 1.6) + Math.random() * 0.3;
+Config.zombieSpeed = wave => 0.5 + Math.min(wave * 0.08, 1.0) + Math.random() * 0.25;
