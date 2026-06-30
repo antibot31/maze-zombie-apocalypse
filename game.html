@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Maze of the Dead — Demo</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div id="wrap">
+    <div id="hud">
+      <span class="stat hp">HP <b id="hp">100</b></span>
+      <span class="stat ammo">AMMO <b id="ammo">∞</b></span>
+      <span class="stat">KILLS <b id="kills">0</b></span>
+      <span class="stat">WAVE <b id="wave">1</b></span>
+      <span class="stat">LVL <b id="level">1</b></span>
+      <span class="stat">XP <b id="xp">0</b></span>
+      <span class="stat">SND <b id="snd">ON</b></span>
+    </div>
+    <canvas id="game"></canvas>
+  </div>
+
+  <div id="overlay">
+    <h1>MAZE OF THE DEAD</h1>
+    <p>A zombie apocalypse RPG shooter. Survive the maze, gun down the horde, level up.</p>
+    <p><kbd>W</kbd><kbd>A</kbd><kbd>S</kbd><kbd>D</kbd> move &nbsp;·&nbsp; <b>Mouse</b> aim &nbsp;·&nbsp; <b>Click / Hold</b> shoot &nbsp;·&nbsp; <kbd>R</kbd> reload &nbsp;·&nbsp; <kbd>M</kbd> mute</p>
+    <p>Each wave brings more, tougher zombies. Killing them earns XP — level up and loot chests to boost your firepower.</p>
+    <button id="startBtn">START</button>
+  </div>
+
+  <!-- Loaded in order; `defer` runs them after the HTML is parsed. -->
+  <script src="src/config.js" defer></script>
+  <script src="src/sound.js" defer></script>
+  <script src="src/maze.js" defer></script>
+  <script src="src/input.js" defer></script>
+  <script src="src/game.js" defer></script>
+</body>
+</html>
